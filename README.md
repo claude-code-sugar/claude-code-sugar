@@ -6,7 +6,7 @@
 
 ## Why We Built This
 
-Hey there! 👋 Let's be honest - we love Claude Code, but we ran into a frustrating problem. If you're not in the US, the web search feature just... doesn't work. And when you're doing research or need to look things up while coding, that's a real pain.
+👋 Let's be honest - we love Claude Code, but we ran into a frustrating problem. If you're not in the US, the web search feature just... doesn't work. And when you're doing research or need to look things up while coding, that's a real pain.
 
 So we went on a hunt for solutions. And guess what? We stumbled upon something pretty cool - there are APIs out there that not only give you free search capabilities, but also access to some seriously impressive language models. Some of these models are actually *better* at understanding code and handling long contexts than what you might expect!
 
