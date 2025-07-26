@@ -33,7 +33,7 @@ Claude Code의 소스 코드를 건드리는 대신 (유지보수가 악몽이 �
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-설치 중에 검색 API 키를 입력하라고 할 텐데, [심류개방플랫폼](https://iflow.cn/?open=setting)에서 무료로 받아서 입력하면 돼요. 완전 쉬워요! 🔑
+설치 중에 검색 API 키를 입력하라고 할 텐데, [심류개방플랫폼](https://docs.iflow.cn/en/docs/)에서 무료로 받아서 입력하면 돼요. 완전 쉬워요! 🔑
 
 그다음에는 평소처럼 Claude Code를 실행하면 됩니다:
 

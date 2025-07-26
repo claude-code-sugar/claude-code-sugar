@@ -33,7 +33,7 @@
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-安装过程中会要求输入搜索 API 密钥，前往[心流开放平台](https://iflow.cn/?open=setting)免费申请一个即可，非常简单！🔑
+安装过程中会要求输入搜索 API 密钥，前往[心流开放平台](https://docs.iflow.cn/docs/)免费申请一个即可，非常简单！🔑
 
 然后像往常一样启动 Claude Code：
 

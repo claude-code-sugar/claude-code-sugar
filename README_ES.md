@@ -33,7 +33,7 @@ En lugar de hackear Claude Code directamente (lo cual sería una pesadilla de ma
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-El instalador te pedirá una clave API de búsqueda - simplemente ve a la [plataforma abierta iFlow](https://iflow.cn/?open=setting), consigue tu clave gratuita, y pégala. ¡Pan comido! 🔑
+El instalador te pedirá una clave API de búsqueda - simplemente ve a la [plataforma abierta iFlow](https://docs.iflow.cn/en/docs/), consigue tu clave gratuita, y pégala. ¡Pan comido! 🔑
 
 Luego inicia Claude Code como lo harías normalmente:
 

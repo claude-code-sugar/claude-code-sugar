@@ -33,7 +33,7 @@ Prêt à booster votre expérience Claude Code ? Lancez simplement ceci :
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-L'installateur vous demandera une clé API de recherche - rendez-vous simplement sur [la plateforme ouverte iFlow](https://iflow.cn/?open=setting), récupérez votre clé gratuite, et collez-la. Un jeu d'enfant ! 🔑
+L'installateur vous demandera une clé API de recherche - rendez-vous simplement sur [la plateforme ouverte iFlow](https://docs.iflow.cn/en/docs/), récupérez votre clé gratuite, et collez-la. Un jeu d'enfant ! 🔑
 
 Puis lancez Claude Code comme vous le feriez normalement :
 

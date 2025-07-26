@@ -33,7 +33,7 @@ Claude Codeのソースコードを変更する代わりに（メンテナンス
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-インストール中に検索API キーの入力が求められますので、[心流開放平台](https://iflow.cn/?open=setting)で無料のキーを取得してご入力ください。とても簡単です！🔑
+インストール中に検索API キーの入力が求められますので、[心流開放平台](https://docs.iflow.cn/en/docs/)で無料のキーを取得してご入力ください。とても簡単です！🔑
 
 その後、いつものようにClaude Codeを起動してください：
 

@@ -33,7 +33,7 @@
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-Установщик попросит API-ключ для поиска - просто зайдите на [открытую платформу iFlow](https://iflow.cn/?open=setting), получите бесплатный ключ и вставьте его. Проще простого! 🔑
+Установщик попросит API-ключ для поиска - просто зайдите на [открытую платформу iFlow](https://docs.iflow.cn/en/docs/), получите бесплатный ключ и вставьте его. Проще простого! 🔑
 
 Затем запускайте Claude Code как обычно:
 
