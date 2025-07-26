@@ -1,50 +1,66 @@
-# Claude Code Sugar
+# Claude Code Sugar 🍯
 
-[English](README.md) | [中文](README_ZH.md) | [日本語](README_JA.md) | [한국어](README_KO.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | **Español** | [Русский](README_RU.md)
+[English](README.md) | [中文](README_ZH.md) | [繁體中文](README_TW.md) | [日本語](README_JA.md) | [한국어](README_KO.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | **Español** | [Русский](README_RU.md)
 
-**A través de Claude Code Sugar, puedes desbloquear algunas funciones restringidas de Claude Code y soportar la adaptación a otros modelos.**
+> **¡Hagamos que Claude Code sea dulcemente accesible en todo el mundo! 🌍**
 
-La motivación inicial de este proyecto surge de un problema práctico que encontramos al usar Claude Code: en regiones fuera de Estados Unidos, la funcionalidad nativa de **búsqueda web** no puede usarse correctamente, lo que trae inconvenientes al trabajo de investigación académica que requiere soporte de búsqueda web.
+## ¿Por qué creamos este proyecto?
 
-En el proceso de buscar soluciones, accidentalmente descubrimos que un producto doméstico proporciona interfaces API abiertas. No solo la funcionalidad de búsqueda puede usarse gratuitamente, sino que también integra múltiples modelos de lenguaje de gran escala—algunos de los cuales se destacan en la comprensión de código y el procesamiento de contexto largo. Esto es sin duda una buena noticia para los usuarios de Claude Code que buscan mejor relación costo-efectividad.
+Seamos honestos: ¡nos encanta Claude Code! Pero nos topamos con un problema súper frustrante. Si no estás en Estados Unidos, la función de búsqueda web simplemente no funciona. Y cuando estás investigando o necesitas buscar información mientras programas, eso es realmente molesto.
 
-Basado en este descubrimiento, desarrollamos el proyecto Claude Code Sugar. Para preservar toda la funcionalidad de Claude Code y mantener actualizaciones continuas, no hemos modificado ningún código de Claude Code, sino que usamos una capa proxy ligera para adaptarse a estas interfaces API, resolviendo así el problema de limitación de la funcionalidad de búsqueda.
+Así que nos pusimos a buscar soluciones. ¿Y adivina qué? ¡Hicimos un descubrimiento increíble! Hay APIs que no solo ofrecen capacidades de búsqueda gratuitas, sino también acceso a modelos de lenguaje impresionantes. ¡Algunos de estos modelos son en realidad *mejores* para entender código y manejar contextos largos de lo que podrías esperar!
 
-Además, este proxy también es compatible con los métodos de llamada de modelos del protocolo OpenAI.
+Eso nos hizo pensar: "¿Qué tal si pudiéramos darles a los usuarios de Claude Code lo mejor de ambos mundos?"
 
-A través de Claude Code Sugar, puedes continuar disfrutando de las poderosas capacidades de Claude Code mientras obtienes opciones de llamada API más flexibles.
+## Lo que hace Claude Code Sugar
 
-**Este proyecto es solo para fines académicos y de intercambio de investigación**
+En lugar de hackear Claude Code directamente (lo cual sería una pesadilla de mantenimiento), construimos un proxy ligero que se sitúa entre Claude Code y estas APIs. Piénsalo como un traductor que habla tanto el idioma de Claude Code como el de estas APIs poderosas.
 
-## Instalación rápida
-Usa el siguiente script para una instalación rápida:
+¿El resultado? Obtienes:
+- ✅ Todas las características increíbles de Claude Code
+- ✅ Búsqueda web que realmente funciona globalmente
+- ✅ Acceso a modelos económicos y de alto rendimiento
+- ✅ Compatibilidad con el protocolo OpenAI (¡los estándares importan!)
+- ✅ Sin modificaciones a Claude Code (las actualizaciones simplemente funcionan)
+
+**Nota: Este proyecto está destinado a fines académicos y de investigación.**
+
+## Listo en 30 segundos ⚡
+
+¿Preparado para potenciar tu experiencia con Claude Code? Solo ejecuta esto:
+
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-El proceso de instalación te pedirá que ingreses una clave API de búsqueda. Ve a la [plataforma abierta iFlow](https://iflow.cn/?open=setting) para solicitar una clave e ingresarla.
+El instalador te pedirá una clave API de búsqueda - simplemente ve a la [plataforma abierta iFlow](https://iflow.cn/?open=setting), consigue tu clave gratuita, y pégala. ¡Pan comido! 🔑
 
-Comienza a usar Claude Code a bajo costo:
+Luego inicia Claude Code como lo harías normalmente:
 
 ```shell
 claude
 ```
 
-## Cómo modificar el modelo
-Usar directamente el script de instalación utilizará por defecto el modelo Qwen3-Coder, y puedes usarlo directamente sin modificar ningún parámetro.
-Si quieres cambiar el modelo, puedes editar `~/.config/claude-code-sugar/config.json` para especificar información del modelo que cumpla con el protocolo OpenAI.
+¡Y listo! Ahora estás usando Claude Code con poderes de búsqueda globales y acceso a modelos económicos. 🚀
 
-Un ejemplo de referencia de config.json:
-``` json
+## ¿Quieres probar diferentes modelos? 🎛️
+
+Por defecto, Claude Code Sugar usa el modelo Qwen3-Coder, que es bastante sólido para la mayoría de tareas de programación. ¡Pero tal vez quieras experimentar con diferentes modelos o usar tus propios endpoints de API!
+
+¡No hay problema! Simplemente edita `~/.config/claude-code-sugar/config.json` y personaliza a tu gusto:
+
+```json
 {
-  "baseURL": "your openai base url",
-  "apiKey": "you openai api key",
+  "baseURL": "tu URL base de OpenAI",
+  "apiKey": "tu clave API", 
   "modelMapping": {
-    "claude-3-5-haiku-20241022": "your model for small task",
-    "claude-3-7-sonnet-20250219": "your model for medium task",
-    "claude-sonnet-4-20250514": "your model for large task",
-    "claude-opus-4-20250514": "your model for large task"
+    "claude-3-5-haiku-20241022": "tu modelo para tareas pequeñas",
+    "claude-3-7-sonnet-20250219": "tu modelo para tareas medianas", 
+    "claude-sonnet-4-20250514": "tu modelo para tareas grandes",
+    "claude-opus-4-20250514": "tu modelo para tareas pesadas"
   },
-  "searchApiKey": "your search api key"
+  "searchApiKey": "tu clave API de búsqueda"
 }
 ```
+
+El mapeo de modelos te permite asignar diferentes modelos a diferentes niveles de complejidad - ¡bastante inteligente para optimizar tanto el rendimiento como los costos! 💰

@@ -1,50 +1,66 @@
-# Claude Code Sugar
+# Claude Code Sugar 🍯
 
-[English](README.md) | [中文](README_ZH.md) | [日本語](README_JA.md) | **한국어** | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
+[English](README.md) | [中文](README_ZH.md) | [繁體中文](README_TW.md) | [日本語](README_JA.md) | **한국어** | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
 
-**Claude Code Sugar를 통해 Claude Code의 일부 제한된 기능을 해제하고 다른 모델에 대한 적응을 지원할 수 있습니다.**
+> **Claude Code를 전 세계 어디서나 달콤하게! 🌍**
 
-이 프로젝트의 초기 동기는 Claude Code를 사용하면서 겪은 실질적인 문제에서 비롯됩니다: 미국 이외의 지역에서는 네이티브 **Web Search** 기능이 정상적으로 사용될 수 없어, 웹 검색 지원이 필요한 학술 연구 작업에 불편을 초래했습니다.
+## 왜 이 프로젝트를 만들었나요?
 
-해결책을 찾는 과정에서, 우연히 국내의 한 제품이 개방형 API 인터페이스를 제공한다는 것을 발견했습니다. 검색 기능을 무료로 사용할 수 있을 뿐만 아니라, 여러 대형 언어 모델도 통합되어 있으며, 그 중 일부는 코드 이해와 긴 컨텍스트 처리에서 우수한 성능을 보입니다. 이는 더 나은 비용 효율성을 원하는 Claude Code 사용자들에게 의심할 여지없이 좋은 소식입니다.
+솔직히 말하면, 저희는 Claude Code를 정말 좋아해요! 하지만 짜증나는 문제가 하나 있었어요. 미국이 아닌 지역에서는 웹 검색 기능이 작동하지 않는다는 거예요. 연구하거나 자료를 찾을 때 정말 불편했죠.
 
-이러한 발견을 바탕으로 Claude Code Sugar 프로젝트를 개발했습니다. Claude Code의 모든 기능을 보존하고 지속적인 업데이트를 유지하기 위해, Claude Code의 코드를 전혀 수정하지 않고, 경량 프록시 레이어를 사용하여 이러한 API 인터페이스에 적응함으로써 검색 기능의 제한 문제를 해결했습니다.
+그래서 해결책을 찾아다니다가 대박을 발견했어요! 국내 플랫폼 중에 무료 검색 API를 제공하는 곳이 있더라고요. 게다가 여러 개의 훌륭한 대형 언어 모델들도 통합되어 있어서, 그 중 일부는 코드 이해와 긴 텍스트 처리에서 정말 뛰어난 성능을 보여줘요!
 
-또한 이 프록시는 OpenAI 프로토콜 모델 호출 방식과도 호환됩니다.
+이거야말로 Claude Code 사용자들이 원하던 바로 그거 아닌가요?
 
-Claude Code Sugar를 통해 Claude Code의 강력한 기능을 계속 누리면서 더 유연한 API 호출 옵션을 얻을 수 있습니다.
+## Claude Code Sugar가 할 수 있는 일
 
-**본 프로젝트는 학술, 연구 교류 목적으로만 사용하시기 바랍니다**
+Claude Code의 소스 코드를 건드리는 대신 (유지보수가 악몽이 될 테니까요), 가벼운 프록시 레이어를 만들었어요. 이게 마치 통역사처럼 Claude Code와 이 훌륭한 API들 사이의 다리 역할을 해줍니다.
 
-## 빠른 설치
-다음 스크립트를 사용하여 빠른 설치를 진행합니다:
+결과적으로 이런 것들을 얻을 수 있어요:
+- ✅ Claude Code의 모든 강력한 기능
+- ✅ 전 세계에서 작동하는 웹 검색
+- ✅ 가성비 좋은 고성능 모델들
+- ✅ OpenAI 프로토콜 호환성 (표준이 중요하죠!)
+- ✅ Claude Code 수정 불필요 (업데이트 걱정 없음)
+
+**참고: 이 프로젝트는 학술 및 연구 목적으로만 사용해주세요.**
+
+## 30초만에 시작하기 ⚡
+
+업그레이드된 Claude Code 경험을 준비됐나요? 이 명령어 하나면 끝이에요:
+
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-설치 과정에서 Search API Key 입력이 요구됩니다. [심류개방플랫폼](https://iflow.cn/?open=setting)에서 Key를 신청하여 입력하세요.
+설치 중에 검색 API 키를 입력하라고 할 텐데, [심류개방플랫폼](https://iflow.cn/?open=setting)에서 무료로 받아서 입력하면 돼요. 완전 쉬워요! 🔑
 
-저비용으로 Claude Code 사용 시작:
+그다음에는 평소처럼 Claude Code를 실행하면 됩니다:
 
 ```shell
 claude
 ```
 
-## 모델 변경 방법
-설치 스크립트를 직접 사용하면 기본적으로 Qwen3-Coder 모델을 사용하며, 어떤 매개변수도 수정하지 않고 바로 사용할 수 있습니다.
-모델을 변경하고 싶다면 `~/.config/claude-code-sugar/config.json`을 편집하여 OpenAI 프로토콜에 부합하는 모델 정보를 지정할 수 있습니다.
+끝! 이제 Claude Code가 글로벌 검색 기능과 가성비 좋은 모델 지원을 갖게 되었어요! 🚀
 
-config.json 참고 예시:
-``` json
+## 다른 모델 써보고 싶어요? 🎛️
+
+기본적으로는 Qwen3-Coder 모델을 사용하는데, 대부분의 코딩 작업에는 충분히 좋아요. 하지만 다른 모델을 시도해보거나 자신만의 API를 사용하고 싶다면? 전혀 문제없어요!
+
+`~/.config/claude-code-sugar/config.json` 파일만 수정하면 돼요:
+
+```json
 {
-  "baseURL": "your openai base url",
-  "apiKey": "you openai api key",
+  "baseURL": "당신의 OpenAI 호환 API URL",
+  "apiKey": "당신의 API 키", 
   "modelMapping": {
-    "claude-3-5-haiku-20241022": "your model for small task",
-    "claude-3-7-sonnet-20250219": "your model for medium task",
-    "claude-sonnet-4-20250514": "your model for large task",
-    "claude-opus-4-20250514": "your model for large task"
+    "claude-3-5-haiku-20241022": "간단한 작업용 모델",
+    "claude-3-7-sonnet-20250219": "중간 작업용 모델", 
+    "claude-sonnet-4-20250514": "복잡한 작업용 모델",
+    "claude-opus-4-20250514": "무거운 작업용 모델"
   },
-  "searchApiKey": "your search api key"
+  "searchApiKey": "당신의 검색 API 키"
 }
 ```
+
+모델 매핑을 통해 작업의 복잡도에 따라 다른 모델을 할당할 수 있어요 - 성능도 보장하고 비용도 절약하는 똑똑한 방법이죠! 💰
