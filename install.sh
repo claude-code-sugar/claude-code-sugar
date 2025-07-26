@@ -125,8 +125,8 @@ cat > "$proxy_config_file" << EOF
   "baseURL": "https://apis.iflow.cn/v1/",
   "apiKey": "$api_key",
   "modelMapping": {
-    "claude-3-5-haiku-20241022": "deepseek-v3-0324",
-    "claude-3-7-sonnet-20250219": "deepseek-v3-0324",
+    "claude-3-5-haiku-20241022": "DeepSeek-V3",
+    "claude-3-7-sonnet-20250219": "DeepSeek-V3",
     "claude-opus-4-20250514": "Qwen3-Coder",
     "claude-sonnet-4-20250514": "Qwen3-Coder"
   },
