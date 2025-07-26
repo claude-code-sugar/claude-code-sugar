@@ -6,7 +6,7 @@
 
 ## Why We Built This
 
-👋 Let's be honest - we love Claude Code, but we ran into a frustrating problem. If you're not in the US, the web search feature just... doesn't work. And when you're doing research or need to look things up while coding, that's a real pain.
+Hey there! 👋 Let's be honest - we love Claude Code, but we ran into a frustrating problem. If you're not in the US, the web search feature just... doesn't work. And when you're doing research or need to look things up while coding, that's a real pain.
 
 So we went on a hunt for solutions. And guess what? We stumbled upon something pretty cool - there are APIs out there that not only give you free search capabilities, but also access to some seriously impressive language models. Some of these models are actually *better* at understanding code and handling long contexts than what you might expect!
 
@@ -33,7 +33,7 @@ Make Sure you have node.js 20+ installed, then just run this script in terminal:
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-The installer will ask for a Search API Key - just hop over to [iFlow Open Platform](https://iflow.cn/?open=setting), grab your free key, and paste it in. Easy peasy! 🔑
+The installer will ask for a Search API Key - just hop over to [iFlow Open Platform](https://docs.iflow.cn/en/docs/), grab your free key, and paste it in. Easy peasy! 🔑
 
 Then fire up Claude Code like you normally would:
 
