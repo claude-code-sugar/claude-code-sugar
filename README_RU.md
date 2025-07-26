@@ -1,6 +1,6 @@
 # Claude Code Sugar
 
-[English](README_EN.md) | [中文](README.md) | [日本語](README_JA.md) | [한국어](README_KO.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | **Русский**
+[English](README.md) | [中文](README_ZH.md) | [日本語](README_JA.md) | [한국어](README_KO.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | **Русский**
 
 **Через Claude Code Sugar вы можете разблокировать некоторые ограниченные функции Claude Code и поддержать адаптацию к другим моделям.**
 

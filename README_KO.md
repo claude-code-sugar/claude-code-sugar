@@ -1,6 +1,6 @@
 # Claude Code Sugar
 
-[English](README_EN.md) | [中文](README.md) | [日本語](README_JA.md) | **한국어** | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
+[English](README.md) | [中文](README_ZH.md) | [日本語](README_JA.md) | **한국어** | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
 
 **Claude Code Sugar를 통해 Claude Code의 일부 제한된 기능을 해제하고 다른 모델에 대한 적응을 지원할 수 있습니다.**
 

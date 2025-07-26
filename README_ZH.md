@@ -1,6 +1,6 @@
 # Claude Code Sugar
 
-[English](README_EN.md) | **中文** | [日本語](README_JA.md) | [한국어](README_KO.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
+[English](README.md) | **中文** | [日本語](README_JA.md) | [한국어](README_KO.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
 
 **通过Claude Code Sugar，可以接触Claude Code的一些限制功能，并支持适配其他模型。**
 

@@ -1,6 +1,6 @@
 # Claude Code Sugar
 
-[English](README_EN.md) | [中文](README.md) | [日本語](README_JA.md) | [한국어](README_KO.md) | **Français** | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
+[English](README.md) | [中文](README_ZH.md) | [日本語](README_JA.md) | [한국어](README_KO.md) | **Français** | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
 
 **Grâce à Claude Code Sugar, vous pouvez débloquer certaines fonctionnalités restreintes de Claude Code et prendre en charge l'adaptation à d'autres modèles.**
 

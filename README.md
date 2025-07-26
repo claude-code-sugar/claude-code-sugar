@@ -1,6 +1,6 @@
 # Claude Code Sugar
 
-**English** | [中文](README.md) | [日本語](README_JA.md) | [한국어](README_KO.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
+**English** | [中文](README_ZH.md) | [日本語](README_JA.md) | [한국어](README_KO.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
 
 **Through Claude Code Sugar, you can unlock some restricted features of Claude Code and support adaptation to other models.**
 
