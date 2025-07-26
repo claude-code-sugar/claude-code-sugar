@@ -1,19 +1,50 @@
-## 这是什么
+# Claude Code Sugar
 
-这是经过改造，可以连接到提供了 OpenAI 协议服务的 [Claude Code](https://docs.anthropic.com/zh-CN/docs/claude-code/overview)。
+**English** | [中文](README.md) | [日本語](README_JA.md) | [한국어](README_KO.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Español](README_ES.md) | [Русский](README_RU.md)
 
-**仅供学术交流、测试使用，请自行负责版权问题。如果要使用原版，可以通过 `npm i -g @anthropic-ai/claude-code 安装。`**
+**Through Claude Code Sugar, you can unlock some restricted features of Claude Code and support adaptation to other models.**
 
-安装方式。要求安装 node.js@18 及其以上（[nodejs 安装方式](https://nodejs.org/en/download)）
+The initial motivation for this project stems from a practical problem we encountered while using Claude Code: in regions outside the United States, the native **Web Search** functionality cannot be used properly, which brings inconvenience to academic research work that requires web search support.
 
+In the process of seeking solutions, we accidentally discovered that a domestic product provides open API interfaces. Not only can the search functionality be used for free, but it also integrates multiple large language models—some of which perform excellently in code understanding and long context processing. This is undoubtedly good news for Claude Code users who want better cost-effectiveness.
+
+Based on this discovery, we developed the Claude Code Sugar project. To preserve all of Claude Code's functionality and maintain continuous updates, we haven't modified any code of Claude Code, but instead use a lightweight proxy layer to adapt these API interfaces, thereby solving the limitation of search functionality.
+
+Additionally, this proxy is also compatible with OpenAI protocol model calling methods.
+
+Through Claude Code Sugar, you can continue to enjoy Claude Code's powerful capabilities while gaining more flexible API calling options.
+
+**This project is for academic and research communication purposes only**
+
+## Quick Installation
+Use the following script for quick installation:
 ```shell
-# 永久安装
-npm i -g claude-code-sugar --registry=https://registry.npmmirror.com
-
-# 临时使用，适用于已经安装了原版 Claude Code 并且想共存
-npx -y --registry=https://registry.npmmirror.com claude-code-sugar
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
 ```
 
-## 注意事项
+During the installation process, you will be asked to enter a Search API Key. Go to [iFlow Open Platform](https://iflow.cn/?open=setting) to apply for a key and enter it.
 
-**安全问题请各位自行负责！！！**
+Start using Claude Code at low cost:
+
+```shell
+claude
+```
+
+## How to Modify the Model
+Using the installation script directly will default to using the Qwen3-Coder model, and you can use it directly without modifying any parameters.
+If you want to change the model, you can edit `~/.config/claude-code-sugar/config.json` to specify model information that complies with the OpenAI protocol.
+
+A reference example of config.json:
+``` json
+{
+  "baseURL": "your openai base url",
+  "apiKey": "you openai api key",
+  "modelMapping": {
+    "claude-3-5-haiku-20241022": "your model for small task",
+    "claude-3-7-sonnet-20250219": "your model for medium task",
+    "claude-sonnet-4-20250514": "your model for large task",
+    "claude-opus-4-20250514": "your model for large task"
+  },
+  "searchApiKey": "your search api key"
+}
+```
