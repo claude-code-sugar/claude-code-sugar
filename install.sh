@@ -4,10 +4,10 @@ set -e
 
 install_nodejs() {
     local platform=$(uname -s)
-
+    
     case "$platform" in
         Linux|Darwin)
-            # 如果是 macOS，先检查 Command Line Tools
+            # Check if Command Line Tools is installed in Mac
             if [ "$platform" = "Darwin" ]; then
                 if ! xcode-select --print-path &> /dev/null; then
                     echo "❌ Xcode Command Line Tools not found on macOS"
@@ -19,18 +19,18 @@ install_nodejs() {
                 fi
                 echo "✅ Xcode Command Line Tools found"
             fi
-
+            
             echo "🚀 Installing Node.js on Unix/Linux/macOS..."
-
+            
             echo "📥 Downloading and installing nvm..."
             curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-
+            
             echo "🔄 Loading nvm environment..."
             \. "$HOME/.nvm/nvm.sh"
-
+            
             echo "📦 Downloading and installing Node.js v22..."
             nvm install 22
-
+            
             echo -n "✅ Node.js installation completed! Version: "
             node -v # Should print "v22.17.0".
             echo -n "✅ Current nvm version: "
@@ -49,7 +49,7 @@ install_nodejs() {
 if command -v node >/dev/null 2>&1; then
     current_version=$(node -v | sed 's/v//')
     major_version=$(echo $current_version | cut -d. -f1)
-
+    
     if [ "$major_version" -ge 18 ]; then
         echo "Node.js is already installed: v$current_version"
     else
@@ -63,16 +63,16 @@ fi
 
 # Check if Claude Code is already installed
 if command -v claude >/dev/null 2>&1; then
-    echo "✅ Claude Code is already installed: $(claude --version)"
+    echo "✅ Claude Code is already installed, your have to remove original claude code first: $(claude --version)"
     echo "💡 If you want to reinstall, please uninstall first with:"
-    echo "   npm uninstall -g claude-code-sugar"
+    echo "   npm uninstall -g @anthropic-ai/claude-code"
     echo ""
     echo "🚪 Installation script exiting..."
     exit 0
 else
     echo "Claude Code not found. Installing..."
     npm i -g claude-code-sugar --registry=https://registry.npmmirror.com
-
+    
     # Get npm global bin directory
     echo "🔍 Detecting npm global bin directory..."
     npm_prefix=$(tnpm config get prefix 2>/dev/null || npm config get prefix 2>/dev/null)
@@ -84,6 +84,57 @@ else
         npm_bin_dir=""
     fi
 fi
+
+# Configure Claude Code to skip onboarding and search key.
+echo "Configuring Claude Code by using iflow key..."
+node --eval '
+    const homeDir = os.homedir(); 
+    const filePath = path.join(homeDir, ".claude.json");
+    if (fs.existsSync(filePath)) {
+        const content = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+        fs.writeFileSync(filePath,JSON.stringify({ ...content, hasCompletedOnboarding: true }, 2), "utf-8");
+    } else {
+        fs.writeFileSync(filePath,JSON.stringify({ hasCompletedOnboarding: true }), "utf-8");
+    }'
+
+# Prompt user for API key
+echo "🔑 Please enter your iflow API key:"
+echo "   You can get your API key from: https://iflow.cn/?open=setting"
+echo "   Note: The input is hidden for security. Please paste your API key directly."
+echo ""
+read -s api_key
+echo ""
+
+if [ -z "$api_key" ]; then
+    echo "⚠️  API key cannot be empty. Please run the script again."
+    exit 1
+fi
+
+# Generate default proxy config for user
+echo "📄 Creating proxy configuration file..."
+proxy_config_dir="$HOME/.config/claude-code-sugar"
+proxy_config_file="$proxy_config_dir/config.json"
+
+# Create directory if it doesn't exist
+mkdir -p "$proxy_config_dir"
+
+# Create proxy config JSON with user's API key
+# Default to use Qwen3-Coder
+cat > "$proxy_config_file" << EOF
+{
+  "baseURL": "https://apis.iflow.cn/v1/",
+  "apiKey": "$api_key",
+  "modelMapping": {
+    "claude-3-5-haiku-20241022": "deepseek-v3-0324",
+    "claude-3-7-sonnet-20250219": "deepseek-v3-0324",
+    "claude-opus-4-20250514": "Qwen3-Coder",
+    "claude-sonnet-4-20250514": "Qwen3-Coder"
+  },
+  "searchApiKey": "$api_key"
+}
+EOF
+
+echo "✅ Proxy configuration created at $proxy_config_file, you can change model by modifying this config later."
 
 # Detect current shell and determine rc file
 current_shell=$(basename "$SHELL")
