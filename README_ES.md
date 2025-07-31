@@ -55,7 +55,6 @@ Por defecto, Claude Code Sugar usa el modelo Qwen3-Coder, que es bastante sólid
   "apiKey": "tu clave API", 
   "modelMapping": {
     "claude-3-5-haiku-20241022": "tu modelo para tareas pequeñas",
-    "claude-3-7-sonnet-20250219": "tu modelo para tareas medianas", 
     "claude-sonnet-4-20250514": "tu modelo para tareas grandes",
     "claude-opus-4-20250514": "tu modelo para tareas pesadas"
   },

@@ -126,9 +126,8 @@ cat > "$proxy_config_file" << EOF
   "apiKey": "$api_key",
   "modelMapping": {
     "claude-3-5-haiku-20241022": "DeepSeek-V3",
-    "claude-3-7-sonnet-20250219": "DeepSeek-V3",
-    "claude-opus-4-20250514": "Qwen3-Coder",
-    "claude-sonnet-4-20250514": "Qwen3-Coder"
+    "claude-sonnet-4-20250514": "Qwen3-Coder",
+    "claude-opus-4-20250514": "Qwen3-Coder"
   },
   "searchApiKey": "$api_key"
 }

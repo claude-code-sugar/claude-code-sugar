@@ -27,7 +27,7 @@ The result? You get:
 
 ## Get Started in 30 Seconds ⚡
 
-Make Sure you have node.js 20+ installed, then just run this script in terminal:
+Make Sure you have node.js 18+ installed, then just run this script in terminal:
 
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
@@ -55,7 +55,6 @@ No problem! Just edit `~/.config/claude-code-sugar/config.json` and customize aw
   "apiKey": "your openai api key", 
   "modelMapping": {
     "claude-3-5-haiku-20241022": "your model for small tasks",
-    "claude-3-7-sonnet-20250219": "your model for medium tasks", 
     "claude-sonnet-4-20250514": "your model for large tasks",
     "claude-opus-4-20250514": "your model for heavy-duty tasks"
   },

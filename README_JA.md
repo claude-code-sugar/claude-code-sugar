@@ -55,7 +55,6 @@ claude
   "apiKey": "あなたのAPIキー", 
   "modelMapping": {
     "claude-3-5-haiku-20241022": "簡単なタスク用のモデル",
-    "claude-3-7-sonnet-20250219": "中程度のタスク用のモデル", 
     "claude-sonnet-4-20250514": "複雑なタスク用のモデル",
     "claude-opus-4-20250514": "重いタスク用のモデル"
   },

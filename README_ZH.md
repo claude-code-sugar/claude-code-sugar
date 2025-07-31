@@ -27,7 +27,7 @@
 
 ## 30秒快速上手 ⚡
 
-确保你已经安装了node.js 20+以上的版本，复制下面的命令行到终端，并执行：
+确保你已经安装了 node.js 18+ 以上的版本，复制下面的命令行到终端，并执行：
 
 ```shell
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claude-code-sugar/claude-code-sugar/refs/heads/main/install.sh)"
@@ -55,7 +55,6 @@ claude
   "apiKey": "你的 API 密钥", 
   "modelMapping": {
     "claude-3-5-haiku-20241022": "处理简单任务的模型",
-    "claude-3-7-sonnet-20250219": "处理中等任务的模型", 
     "claude-sonnet-4-20250514": "处理复杂任务的模型",
     "claude-opus-4-20250514": "处理重型任务的模型"
   },

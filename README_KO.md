@@ -55,7 +55,6 @@ claude
   "apiKey": "당신의 API 키", 
   "modelMapping": {
     "claude-3-5-haiku-20241022": "간단한 작업용 모델",
-    "claude-3-7-sonnet-20250219": "중간 작업용 모델", 
     "claude-sonnet-4-20250514": "복잡한 작업용 모델",
     "claude-opus-4-20250514": "무거운 작업용 모델"
   },

@@ -55,7 +55,6 @@ claude
   "apiKey": "你的API金鑰", 
   "modelMapping": {
     "claude-3-5-haiku-20241022": "處理簡單工作的模型",
-    "claude-3-7-sonnet-20250219": "處理中等工作的模型", 
     "claude-sonnet-4-20250514": "處理複雜工作的模型",
     "claude-opus-4-20250514": "處理重度工作的模型"
   },

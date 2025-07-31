@@ -55,7 +55,6 @@ Kein Problem! Bearbeiten Sie einfach `~/.config/claude-code-sugar/config.json` u
   "apiKey": "Ihr API-Schlüssel", 
   "modelMapping": {
     "claude-3-5-haiku-20241022": "Ihr Modell für kleine Aufgaben",
-    "claude-3-7-sonnet-20250219": "Ihr Modell für mittlere Aufgaben", 
     "claude-sonnet-4-20250514": "Ihr Modell für große Aufgaben",
     "claude-opus-4-20250514": "Ihr Modell für schwere Aufgaben"
   },
